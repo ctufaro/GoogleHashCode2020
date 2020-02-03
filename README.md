@@ -4,7 +4,7 @@
 Copy Program.cs into your dotnet core project.
 
 ```sh
-$ dotnet run <path to input file> true
+$ dotnet run [path to input file] true
 ```
 
 ### Results

@@ -29,13 +29,65 @@ class Program
 
     static void GreedyLoop(int max, int[] set, bool generateOutputFile = false, string outputFileName = "")
     {
+        int bestSetLength = 0;
+        int runningSum = 0;
+
+        // DECREASE THE SIZE OF THE ARRAY FOR A BETTER APPROXIMATION
+        int setLength = set.Length - 1;
+        // BEST APPROXIMATION SHOULD BE CLOSEST TO ZERO (ZERO IS TARGET FOUND)
+        int bestApproximation = Int32.MaxValue;
+
+        while(setLength >= 0)
+        {
+            for (int i = setLength; i >= 0; i--)
+            {
+                if (runningSum == max)
+                {                    
+                    break;
+                }
+                else if (runningSum + set[i] > max)
+                {
+                    continue;
+                }
+                else
+                {
+                    runningSum += set[i];
+                }
+            }
+
+            // RUNNING BEST APPROXIMATION, STORE SETLENGTH IN MEMORY
+            if (Math.Abs(runningSum - max) == 0 || Math.Abs(runningSum - max) < bestApproximation)
+            {
+                bestApproximation = Math.Abs(runningSum - max);
+                bestSetLength = setLength;
+            }
+
+            runningSum = 0;
+            setLength--;
+        }
+
+        int outSum = 0;        
+        List<int> resultSet = GetOutputSet(bestSetLength, set, max, out outSum);
+        Console.WriteLine("Total:" + outSum);
+
+        if (generateOutputFile)
+        {
+            string count = resultSet.Count.ToString();
+            string contents = String.Join(" ", resultSet.Select(p => p.ToString()).ToArray());
+            File.WriteAllText(outputFileName, count + "\n" + contents);
+        }
+    }
+
+    public static List<int> GetOutputSet(int setLength, int[] set, int max, out int sum)
+    {
         int runningSum = 0;
         List<int> resultSet = new List<int>();
 
-        for (int i = set.Length - 1; i >= 0; i--)
+        for (int i = setLength; i >= 0; i--)
         {
             if (runningSum == max)
             {
+                setLength = 0;
                 break;
             }
             else if (runningSum + set[i] > max)
@@ -48,20 +100,10 @@ class Program
                 runningSum += set[i];
             }
         }
+
+        sum = runningSum;
         resultSet.Sort();
-        Console.WriteLine("Total: " + runningSum);
-
-        if (generateOutputFile)
-            File.WriteAllText(outputFileName, resultSet.Count.ToString());
-
-        resultSet.Sort();
-
-        if (generateOutputFile)
-        {
-            string count = resultSet.Count.ToString();
-            string contents = String.Join(" ", resultSet.Select(p => p.ToString()).ToArray());
-            File.WriteAllText(outputFileName, count + "\n" + contents);
-        }
+        return resultSet;
     }
 
     public static bool[,] CreateMatrix(int maxSlices, int[] slices)

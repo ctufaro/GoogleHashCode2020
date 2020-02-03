@@ -9,12 +9,12 @@ $ dotnet run [path to input file] -t
 ```
 
 ### Results
-| Input Set | Generated Slices / Points | Maximum Slices / Points |
+| Input Set | Generated Slices / Points | Maximum Slices / Points | Method |
 | ------ | ------ | ------ |
-| a_example.in | 16 | 16 |
-| b_small.in | 100 | 100 |
-| c_medium.in | 4,500 | 4,500 |
-| d_quite_big.in | 999,999,725 | 1,000,000,000 |
-| e_also_big.in | 504,999,983 | 505,000,000 |
-| **Total** | **1,505,004,324** | **1,505,004,616** |
+| a_example.in | 16 | 16 | BackTrack |
+| b_small.in | 100 | 100 | BackTrack |
+| c_medium.in | 4,500 | 4,500 | GreedyLoop |
+| d_quite_big.in | 999,999,725 | 1,000,000,000 | GreedyLoop |
+| e_also_big.in | 504,999,983 | 505,000,000 | GreedyLoop |
+| **Total** | **1,505,004,324** | **1,505,004,616** ||
 

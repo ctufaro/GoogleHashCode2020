@@ -1,4 +1,4 @@
-![](https://github.com/ctufaro/GoogleHashCode2020/blob/master/logo.png?raw=true)
+<img align="left" src="https://github.com/ctufaro/GoogleHashCode2020/blob/master/logo.png?raw=true">
 # Google Hashcode 2020
 ### Usage
 

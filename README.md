@@ -9,7 +9,7 @@ $ dotnet run [path to input file] -t
 ```
 
 ### Results
-| Input Set | Generated Slices / Points | Maximum Slices / Points | Method |
+| Input File | Generated Slices / Points | Maximum Slices / Points | Method |
 | ------ | ------ | ------ | ------ |
 | a_example.in | 16 | 16 | BackTrack() |
 | b_small.in | 100 | 100 | BackTrack() |

@@ -8,7 +8,7 @@ $ dotnet run <path to input file> true
 ```
 
 ### Results
-| File | Generated Slices/Points | Maximum Slices/Points |
+| Input Set | Generated Slices / Points | Maximum Slices / Points |
 | ------ | ------ | ------ |
 | a_example.in | 16 | 17 |
 | b_small.in | 100 | 100 |

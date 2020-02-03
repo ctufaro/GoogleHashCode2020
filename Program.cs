@@ -17,7 +17,7 @@ class Program
         bool generateOutputFile = args[1] != null;
         string fileName = Path.GetFileName(filePath);
         string[] path = File.ReadAllLines(filePath);
-        string[] backTrackFiles = new string[] { "a_exmaple.in", "b_small.in", "c_medium.in" };
+        string[] backTrackFiles = new string[] { "a_example.in", "b_small.in", "c_medium.in" };
         int[] set = path[1].Split(' ').Select(n => Convert.ToInt32(n)).ToArray();
         int max = Int32.Parse(path[0].Split(' ')[0]);
 

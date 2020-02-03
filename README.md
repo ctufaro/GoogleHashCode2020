@@ -10,7 +10,7 @@ $ dotnet run <path to input file> true
 ### Results
 | Input Set | Generated Slices / Points | Maximum Slices / Points |
 | ------ | ------ | ------ |
-| a_example.in | 16 | 17 |
+| a_example.in | 16 | 16 |
 | b_small.in | 100 | 100 |
 | c_medium.in | 4,500 | 4,500 |
 | d_quite_big.in | 999,999,725 | 1,000,000,000 |

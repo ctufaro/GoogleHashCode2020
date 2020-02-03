@@ -16,5 +16,5 @@ $ dotnet run [path to input file] -t
 | c_medium.in | 4,500 | 4,500 | BackTrack() |
 | d_quite_big.in | 999,999,725 | 1,000,000,000 | GreedyLoop() |
 | e_also_big.in | 504,999,983 | 505,000,000 | GreedyLoop() |
-| **totals** | **1,505,004,324** | **1,505,004,616** ||
+totals : **1,505,004,324** / **1,505,004,616**
 

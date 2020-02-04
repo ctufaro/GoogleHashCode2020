@@ -2,7 +2,7 @@
 # Google Hashcode 2020
 ### Usage
 
-Copy Program.cs into your .NET Core Console Application.
+Copy [Program.cs](https://raw.githubusercontent.com/ctufaro/GoogleHashCode2020/master/Program.cs) into your .NET Core Console Application.
 
 ```sh
 $ dotnet run [path to input file] -t

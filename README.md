@@ -17,5 +17,5 @@ $ dotnet run [path to input file] -t
 | d_quite_big.in | 999,999,932 | 1,000,000,000 | GreedyLoop() |
 | e_also_big.in | 505,000,000 | 505,000,000 | GreedyLoop() |
 
-totals : **1,505,004,548** / **1,505,004,616**
+total points : **1,505,004,548** / **1,505,004,616**
 

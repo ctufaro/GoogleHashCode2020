@@ -11,9 +11,9 @@ $ dotnet run [path to input file] -t
 ### Results
 | Input File | Generated Slices / Points | Maximum Slices / Points | Method |
 | ------ | ------ | ------ | ------ |
-| a_example.in | 16 | 16 | `BackTrack()` |
-| b_small.in | 100 | 100 | `BackTrack()` |
-| c_medium.in | 4,500 | 4,500 | `BackTrack()` |
+| a_example.in | 16 | 16 | `GreedyLoop()` |
+| b_small.in | 100 | 100 | `GreedyLoop()` |
+| c_medium.in | 4,500 | 4,500 | `GreedyLoop()` |
 | d_quite_big.in | 999,999,932 | 1,000,000,000 | `GreedyLoop()` |
 | e_also_big.in | 505,000,000 | 505,000,000 | `GreedyLoop()` |
 
